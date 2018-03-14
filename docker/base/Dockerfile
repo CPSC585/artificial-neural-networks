@@ -28,7 +28,8 @@ RUN apt-get install -y python$PYTHON_VERSION python$PYTHON_VERSION-dev \
     && pip install jupyter jupyterlab ipython seaborn scikit-learn scikit-image \
     && pip install tensorflow keras \
     && pip install pydot graphviz \
-    && pip install plotly cufflinks nodejs npm
+    && pip install plotly cufflinks nodejs npm \
+    && pip install h5py imageio
 
 RUN jupyter labextension install @jupyterlab/plotly-extension
 
