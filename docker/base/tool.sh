@@ -29,7 +29,7 @@ DOCKERFILE="Dockerfile"
 DOCKER_BINARY="docker"
 
 if [[ "${COMMAND}" == "build" ]]; then
-    ${DOCKER_BINARY} build --no-cache --force-rm \
+    ${DOCKER_BINARY} build --force-rm \
     -t ${DOCKER_TAG} -f ${DOCKERFILE} .
 elif [[ "${COMMAND}" == "push" ]]; then
     ${DOCKER_BINARY} push ${DOCKER_TAG}
